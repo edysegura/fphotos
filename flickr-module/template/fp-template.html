@@ -1,0 +1,14 @@
+<div class="fp-container">
+    <input type="text" ng-model="keyword" />
+    <i ng-show="isLoading">Loading...</i>
+    <div class="fp-items">
+        <a href="{{photo.url}}" ng-repeat="photo in photos">
+            <img ng-src="{{photo.imgUrl}}" alt="{{photo.desc}}" />
+        </a>
+    </div>
+    <div ng-show="isMultiplePages" class="fp-controls">
+        <span class="fp-next">Next</span>
+        <span class="fp-pages">{{flickrData.page}} of {{flickrData.pages}}</span>
+        <span class="fp-previous">Previous</span>
+    </div>
+</div>
